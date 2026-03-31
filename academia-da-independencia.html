@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia da Independência — Temporada 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#8B1A1A;--red-dark:#6B1212;
+  --gold:#DAA66E;--gold-dark:#B8844A;
+  --navy:#2C3952;
+  --cream:#F5F0E8;--cream-dark:#EAE3D6;
+  --black:#141414;--off:#1C1C1C;
+  --white:#FFFFFF;--gray:#888;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;line-height:1.6}
+h1,h2,h3,.imp{font-family:Impact,'Arial Narrow',Arial,sans-serif;line-height:1.02;letter-spacing:-.01em;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,7.5vw,6.5rem)}
+h2{font-size:clamp(2rem,5vw,4rem)}
+h3{font-size:clamp(1.3rem,2.5vw,1.9rem)}
+p{line-height:1.78}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.ey{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:18px}
+.ey-r{background:var(--red);color:#fff}
+.ey-g{background:var(--gold);color:#1a1a1a}
+.ey-o{border:1px solid var(--gold);color:var(--gold)}
+.ey-w{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7)}
+.btn{display:inline-block;padding:17px 38px;font-family:Impact,'Arial Narrow',sans-serif;font-size:1.05rem;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .2s ease;border-radius:2px;line-height:1}
+.btn-r{background:var(--red);color:#fff}.btn-r:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(139,26,26,.45)}
+.btn-g{background:var(--gold);color:#1a1a1a}.btn-g:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(218,166,110,.4)}
+.btn-ow{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}.btn-ow:hover{background:rgba(255,255,255,.08)}
+.btn-xl{padding:20px 52px;font-size:1.2rem}
+.div{width:48px;height:4px;background:var(--red);margin:18px 0 28px}
+.div-g{background:var(--gold)}
+.div-c{margin:18px auto 28px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* HEADER */
+#hdr{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .3s,box-shadow .3s}
+#hdr.solid{background:rgba(12,12,12,.97);box-shadow:0 2px 24px rgba(0,0,0,.6)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1160px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo-icon{width:46px;height:46px;flex-shrink:0}
+.logo-name{font-family:'Roboto',serif;font-weight:700;font-style:italic;font-size:1.05rem;color:#fff;line-height:1.1}
+.logo-sub{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.nav-ul{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-ul a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
+.nav-ul a:hover{color:var(--gold)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:25px;height:2px;background:#fff;transition:all .3s}
+.ham.x span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.x span:nth-child(2){opacity:0}
+.ham.x span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob{display:none;position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:850;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob.open{display:flex}
+.mob a{font-family:Impact,sans-serif;font-size:1.9rem;color:#fff;text-decoration:none;text-transform:uppercase}
+.mob a:hover{color:var(--gold)}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding-top:88px}
+.hero-wm{position:absolute;top:50%;left:-1%;transform:translateY(-50%);font-family:Impact,sans-serif;font-size:clamp(9rem,22vw,24rem);color:rgba(139,26,26,.065);white-space:nowrap;pointer-events:none;user-select:none;z-index:0}
+.hero-g{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;z-index:1;padding:64px 28px;max-width:1160px;margin:0 auto;width:100%}
+.hero-szn{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero-szn-line{width:36px;height:2px;background:var(--red)}
+.hero-szn-lbl{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero-h1{color:#fff;margin-bottom:10px}
+.hero-h1 .red{color:var(--red);display:block}
+.hero-bold{font-family:Impact,sans-serif;font-size:clamp(1rem,2.2vw,1.4rem);color:rgba(255,255,255,.85);letter-spacing:.03em;text-transform:uppercase;margin-bottom:8px}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.5);max-width:460px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.vid-box{aspect-ratio:16/9;background:#0f0f0f;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.06);position:relative}
+.vid-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:linear-gradient(145deg,#1e0808 0%,#0f0f0f 100%)}
+.play{width:68px;height:68px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s,background .2s;box-shadow:0 0 0 14px rgba(139,26,26,.12)}
+.play:hover{transform:scale(1.1);background:var(--red-dark)}
+.play svg{width:26px;height:26px;fill:#fff;margin-left:4px}
+.vid-note{font-size:.7rem;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase}
+.vid-badge{position:absolute;top:14px;right:14px;background:var(--red);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.vid-lbl{text-align:center;font-size:.65rem;color:rgba(255,255,255,.2);letter-spacing:.07em;margin-top:8px}
+
+/* TICKER */
+.ticker{background:var(--red);overflow:hidden;padding:13px 0;white-space:nowrap}
+.ticker-tr{display:inline-flex;animation:tick 32s linear infinite}
+.ti{display:inline-flex;align-items:center;gap:18px;padding:0 28px;font-family:Impact,sans-serif;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+.td{width:5px;height:5px;background:rgba(255,255,255,.45);border-radius:50%;flex-shrink:0}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* DIAGNÓSTICO */
+#diag{background:var(--cream);padding:96px 0;color:var(--black)}
+.diag-h h2{color:var(--black)}.diag-h h2 em{color:var(--red);font-style:normal}
+.diag-h{margin-bottom:60px}
+.diag-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.diag-l p{font-size:1rem;color:#555;margin-bottom:12px}
+.diag-l p strong{color:var(--black)}
+.sym-list{display:flex;flex-direction:column;gap:0}
+.sym{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid var(--cream-dark)}
+.sym:last-child{border-bottom:none}
+.sym-dash{width:28px;height:2px;background:var(--red);flex-shrink:0;margin-top:11px}
+.sym p{font-size:.95rem;color:#444}
+
+/* MÉTODO */
+#method{background:var(--black);padding:96px 0}
+.method-h{text-align:center;margin-bottom:64px}
+.method-h h2 span{color:var(--gold)}
+.method-h .sub{color:rgba(255,255,255,.5);font-size:1rem;max-width:540px;margin:14px auto 0}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#222;border-radius:4px;overflow:hidden;margin-bottom:48px}
+.pil{background:var(--off);padding:44px 34px;border-bottom:3px solid transparent;transition:border-color .25s,background .25s}
+.pil:hover{background:#1f1f1f;border-color:var(--gold)}
+.pil-num{font-family:Impact,sans-serif;font-size:3.5rem;color:rgba(218,166,110,.15);line-height:1;margin-bottom:20px}
+.pil h3{font-family:'Roboto',sans-serif;font-size:1.1rem;font-weight:700;text-transform:none;color:#fff;margin-bottom:10px}
+.pil p{font-size:.875rem;color:rgba(255,255,255,.45);line-height:1.75}
+.pil-tag{display:inline-block;background:var(--red);color:rgba(255,255,255,.9);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:14px}
+.method-cta{text-align:center}
+
+/* NOVIDADE */
+#newt{background:var(--navy);padding:96px 0}
+.newt-h{text-align:center;margin-bottom:64px}
+.newt-h h2 span{color:var(--gold)}
+.newt-h .sub{color:rgba(255,255,255,.55);max-width:540px;margin:14px auto 0;font-size:1rem}
+.new-g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.nc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:38px 28px;transition:background .2s,border-color .2s}
+.nc:hover{background:rgba(255,255,255,.08);border-color:rgba(218,166,110,.2)}
+.nc-ico{font-family:Impact,sans-serif;font-size:2.2rem;color:var(--gold);margin-bottom:16px;line-height:1}
+.nc h3{font-family:'Roboto',sans-serif;font-size:1rem;font-weight:700;text-transform:none;color:#fff;margin-bottom:10px}
+.nc p{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.75}
+.nc .bon{display:inline-block;background:rgba(218,166,110,.15);color:var(--gold);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:14px}
+
+/* FUNDADOR */
+#founder{background:var(--black);padding:96px 0}
+.founder-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.founder-ph{aspect-ratio:4/5;background:linear-gradient(160deg,#1e0808 0%,#111 100%);border-radius:4px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;border:1px solid rgba(255,255,255,.05);position:relative}
+.founder-sil{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:70%;height:82%;background:linear-gradient(to bottom,#2a1010 0%,#1a0a0a 100%);border-radius:50% 50% 0 0}
+.founder-note{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.7);color:rgba(255,255,255,.38);font-size:.63rem;padding:5px 10px;border-radius:2px;letter-spacing:.07em}
+.founder-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,transparent 100%);padding:28px 22px 22px}
+.founder-cap .fn{font-family:Impact,sans-serif;font-size:1.4rem;letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.founder-cap .fr{font-size:.68rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+.founder-r h2{margin-bottom:14px}.founder-r h2 span{color:var(--red)}
+.founder-r p{color:rgba(255,255,255,.6);font-size:.975rem;line-height:1.82;margin-bottom:16px}
+.founder-q{border-left:3px solid var(--gold);padding:16px 20px;margin:28px 0;background:rgba(218,166,110,.05)}
+.founder-q p{color:rgba(255,255,255,.75);font-style:italic;font-size:.95rem;margin:0}
+
+/* PROFESSORES */
+#inst{background:var(--off);padding:96px 0}
+.inst-h{margin-bottom:56px}
+.inst-h h2 span{color:var(--gold)}
+.inst-h .sub{color:rgba(255,255,255,.5);font-size:.975rem;max-width:520px;margin-top:10px}
+.inst-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ic{border-radius:3px;overflow:hidden;transition:transform .2s}.ic:hover{transform:translateY(-4px)}
+.ic-img{aspect-ratio:3/4;background:#1a1a1a;position:relative;overflow:hidden}
+.ic-sil{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:75%;height:85%;background:linear-gradient(to bottom,#2a2a2a,#111);border-radius:50% 50% 0 0}
+.ic-ov{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,transparent 100%);padding:36px 14px 14px;transition:background .25s}
+.ic:hover .ic-ov{background:linear-gradient(to top,rgba(139,26,26,.92) 0%,transparent 100%)}
+.ic-ov .in{font-weight:700;font-size:.88rem;color:#fff;opacity:1;transform:none}
+.ic-ov .ir{font-size:.65rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-top:3px;opacity:1;transform:none}
+.ic-note{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.65);color:rgba(255,255,255,.3);font-size:.6rem;padding:3px 7px;border-radius:2px}
+.inst-footer{text-align:center;color:rgba(255,255,255,.2);font-size:.68rem;margin-top:16px;letter-spacing:.06em}
+
+/* CONTEÚDO */
+#content{background:var(--cream);padding:96px 0;color:var(--black)}
+.cnt-h{margin-bottom:60px}
+.cnt-h h2{color:var(--black)}.cnt-h h2 span{color:var(--red)}
+.cnt-h .sub{color:#555;font-size:1rem;max-width:520px;margin-top:12px}
+.plan-hero{background:var(--black);border-radius:6px;padding:44px;margin-bottom:36px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.ph-l .plbl{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+.ph-l h3{font-family:Impact,sans-serif;font-size:2.2rem;letter-spacing:.04em;color:#fff;text-transform:uppercase}
+.ph-l p{color:rgba(255,255,255,.4);font-size:.82rem;margin-top:8px;max-width:360px}
+.ph-r{text-align:right;flex-shrink:0}
+.ph-r .from{font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.12em;text-transform:uppercase}
+.ph-r .price{display:flex;align-items:baseline;justify-content:flex-end;gap:3px;line-height:1}
+.ph-r .cur{font-family:Impact,sans-serif;font-size:1.5rem;color:#fff}
+.ph-r .val{font-family:Impact,sans-serif;font-size:4rem;color:#fff}
+.ph-r .per{font-size:.8rem;color:rgba(255,255,255,.35)}
+.ph-r .obs{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:4px}
+.mods-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--cream-dark);border-radius:4px;overflow:hidden;margin-bottom:28px}
+.mod{background:var(--cream);padding:28px 24px;border-top:3px solid transparent;transition:border-color .2s,background .2s}
+.mod:hover{background:#f0e8d8;border-color:var(--red)}
+.mod-tag{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.mod h4{font-family:'Roboto',sans-serif;font-size:.92rem;font-weight:700;color:var(--black);margin-bottom:8px;line-height:1.4}
+.mod ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.mod ul li{font-size:.76rem;color:#555;padding-left:14px;position:relative;line-height:1.5}
+.mod ul li::before{content:'—';position:absolute;left:0;color:var(--red);font-size:.7rem}
+.acv{background:var(--navy);border-radius:4px;padding:32px 36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.acv-ico{font-family:Impact,sans-serif;font-size:2.5rem;color:var(--gold);flex-shrink:0}
+.acv-t h4{font-family:'Roboto',sans-serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:6px}
+.acv-t p{font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.65;margin:0}
+.cnt-cta{text-align:center;padding-top:8px}
+
+/* RESULTADOS */
+#res{background:var(--black);padding:96px 0}
+.res-h{margin-bottom:56px}
+.res-h h2 span{color:var(--gold)}
+.res-h .sub{color:rgba(255,255,255,.5);font-size:.975rem;max-width:500px;margin-top:10px}
+.dep-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dep{background:#0f0f0f;border:1px solid rgba(255,255,255,.06);border-radius:4px;padding:32px 26px;transition:border-color .2s}
+.dep:hover{border-color:rgba(218,166,110,.2)}
+.stars{display:flex;gap:3px;margin-bottom:18px}
+.star{width:13px;height:13px;background:var(--gold);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.dep-txt{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.78;font-style:italic;margin-bottom:22px}
+.dep-au{display:flex;align-items:center;gap:12px}
+.ava{width:40px;height:40px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:Impact,sans-serif;font-size:.95rem;color:#fff;flex-shrink:0}
+.dn{font-weight:700;font-size:.85rem;color:#fff}
+.dr{font-size:.7rem;color:var(--gold);letter-spacing:.06em}
+.dep-ph{background:#0a0a0a;border:1px dashed rgba(255,255,255,.1);border-radius:4px;padding:48px 28px;text-align:center;grid-column:1/-1}
+.dep-ph p{color:rgba(255,255,255,.25);font-size:.8rem;letter-spacing:.06em}
+
+/* PARA QUEM */
+#fw{background:var(--red);padding:96px 0;position:relative;overflow:hidden}
+.fw-bg{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-family:Impact,sans-serif;font-size:clamp(14rem,30vw,34rem);color:rgba(0,0,0,.1);line-height:1;pointer-events:none;user-select:none}
+.fw-g{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;position:relative;z-index:1}
+.fw-l h2{color:#fff;margin-bottom:18px}
+.fw-l .sub{color:rgba(255,255,255,.8);font-size:1.05rem;margin-bottom:32px}
+.fw-yes{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;list-style:none}
+.fw-yes li{display:flex;align-items:flex-start;gap:12px;color:rgba(255,255,255,.9);font-size:.95rem}
+.arr{width:22px;height:22px;background:rgba(0,0,0,.2);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.75rem}
+.fw-no{margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.15)}
+.fw-no .no-lbl{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;margin-bottom:14px}
+.fw-no p{color:rgba(255,255,255,.65);font-size:.9rem}
+.fw-r{display:flex;flex-direction:column;gap:2px}
+.fwc{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.08);padding:28px 24px;border-left:3px solid rgba(255,255,255,.15);transition:background .2s,border-color .2s}
+.fwc:hover{background:rgba(0,0,0,.3);border-color:rgba(255,255,255,.3)}
+.fwc h4{font-family:'Roboto',sans-serif;font-weight:700;font-size:.95rem;color:#fff;margin-bottom:6px}
+.fwc p{font-size:.82rem;color:rgba(255,255,255,.6)}
+
+/* CTA FINAL */
+#cta{background:var(--black);padding:104px 0;text-align:center;position:relative;overflow:hidden}
+.cta-wm{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-family:Impact,sans-serif;font-size:clamp(8rem,20vw,22rem);color:rgba(139,26,26,.07);white-space:nowrap;pointer-events:none;user-select:none;line-height:1}
+.cta-in{position:relative;z-index:1}
+#cta h2{margin-bottom:20px}
+#cta h2 span{color:var(--red);display:block}
+#cta .sub{color:rgba(255,255,255,.55);font-size:1rem;max-width:540px;margin:0 auto 40px}
+.trust-r{display:flex;align-items:center;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
+.ti2{display:flex;align-items:center;gap:8px;font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.04em}
+.tck{width:16px;height:16px;background:rgba(218,166,110,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tck::after{content:'';width:5px;height:3px;border-left:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(-45deg) translate(0,-1px)}
+
+/* FOOTER */
+#ftr{background:#0A0A0A;padding:60px 0 28px}
+.ftr-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px}
+.ftr-br p{font-size:.83rem;color:rgba(255,255,255,.35);line-height:1.75;margin-top:14px;max-width:260px}
+.ftr-c h5{font-family:Impact,sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.ftr-c ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ftr-c a{font-size:.8rem;color:rgba(255,255,255,.38);text-decoration:none;transition:color .2s}
+.ftr-c a:hover{color:#fff}
+.ftr-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.ftr-bot p{font-size:.72rem;color:rgba(255,255,255,.22)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .nav-ul{display:none}.ham{display:flex}
+  .hero-g{grid-template-columns:1fr;gap:40px;padding:40px 28px}
+  .hero-vid{order:-1}
+  .diag-g{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .new-g{grid-template-columns:1fr 1fr}
+  .founder-g{grid-template-columns:1fr;gap:48px}
+  .inst-g{grid-template-columns:repeat(3,1fr)}
+  .mods-g{grid-template-columns:1fr 1fr}
+  .dep-g{grid-template-columns:1fr 1fr}
+  .fw-g{grid-template-columns:1fr;gap:44px}
+  .ftr-top{grid-template-columns:1fr 1fr;gap:32px}
+  .ftr-br{grid-column:1/-1}
+}
+@media(max-width:680px){
+  h1{font-size:clamp(2.4rem,11vw,3.8rem)}h2{font-size:clamp(1.8rem,8vw,2.8rem)}
+  .pillars{grid-template-columns:1fr}
+  .new-g{grid-template-columns:1fr}
+  .mods-g{grid-template-columns:1fr}
+  .inst-g{grid-template-columns:1fr 1fr}
+  .dep-g{grid-template-columns:1fr}
+  .plan-hero{flex-direction:column}
+  .ph-r{text-align:left}
+  .trust-r{flex-direction:column;align-items:flex-start;padding:0 28px}
+  .ftr-top{grid-template-columns:1fr}
+  .ftr-bot{flex-direction:column;align-items:flex-start}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{text-align:center}
+  .acv{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-in">
+    <a href="img/logo.png" class="logo">
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" stroke="#8B1A1A" stroke-width="2.5" fill="none"/>
+        <ellipse cx="24" cy="18" rx="8" ry="9" fill="#8B1A1A"/>
+        <rect x="17" y="26" width="14" height="10" rx="1" fill="#8B1A1A"/>
+        <path d="M21 13 L24 7.5 L27 13" stroke="#DAA66E" stroke-width="1.5" fill="none"/>
+        <line x1="20" y1="21" x2="28" y2="21" stroke="#DAA66E" stroke-width="1" opacity=".6"/>
+      </svg>
+      <div><div class="logo-name">Academia</div><div class="logo-sub">da Independência</div></div>
+    </a>
+    <nav><ul class="nav-ul">
+      <li><a href="#diag">O Problema</a></li>
+      <li><a href="#method">O Método</a></li>
+      <li><a href="#inst">Professores</a></li>
+      <li><a href="#content">Conteúdo</a></li>
+      <li><a href="#fw">Para Quem</a></li>
+      <li><a href="#cta" class="btn btn-r" style="padding:10px 20px;font-size:.76rem">Entrar para a Academia</a></li>
+    </ul></nav>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mob" id="mob">
+  <a href="#diag" onclick="cm()">O Problema</a>
+  <a href="#method" onclick="cm()">O Método</a>
+  <a href="#inst" onclick="cm()">Professores</a>
+  <a href="#content" onclick="cm()">Conteúdo</a>
+  <a href="#fw" onclick="cm()">Para Quem</a>
+  <a href="#cta" class="btn btn-g btn-xl" onclick="cm()">Entrar para a Academia</a>
+</div>
+
+<!-- SEC 1 — HERO -->
+<section id="hero">
+  <div class="hero-wm" aria-hidden="true">INDEPENDÊNCIA</div>
+  <div class="hero-g">
+    <div>
+      <div class="hero-szn rv"><div class="hero-szn-line"></div><span class="hero-szn-lbl">Temporada 2026</span></div>
+      <h1 class="hero-h1 rv d1">A escola de negócios<br><span class="red">da Beauty Economy.</span></h1>
+      <p class="hero-bold rv d2">Posicionamento. Marketing. Vendas.</p>
+      <p class="hero-sub rv d2">Tudo que a faculdade não ensinou — e o mercado cobra todo dia.</p>
+      <div class="hero-ctas rv d3">
+        <a href="#cta" class="btn btn-r btn-xl">Entrar para a Academia</a>
+        <a href="#diag" class="btn btn-ow">Ver o Diagnóstico</a>
+      </div>
+    </div>
+    <div class="hero-vid rv d2">
+      <div class="vid-box">
+        <div class="vid-in">
+          <div class="play" id="p1" role="button" aria-label="Play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="vid-note">Vídeo de apresentação</span>
+        </div>
+        <div class="vid-badge">Temporada 2026</div>
+      </div>
+      <p class="vid-lbl">📹 Aguardando vídeo do cliente</p>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-tr">
+    <span class="ti">Beauty Economy<span class="td"></span></span><span class="ti">Posicionamento<span class="td"></span></span><span class="ti">Marketing<span class="td"></span></span><span class="ti">Vendas<span class="td"></span></span><span class="ti">Independência Financeira<span class="td"></span></span><span class="ti">Temporada 2026<span class="td"></span></span><span class="ti">Profetas da Estética<span class="td"></span></span><span class="ti">Método de Negócio<span class="td"></span></span><span class="ti">Beauty Economy<span class="td"></span></span><span class="ti">Posicionamento<span class="td"></span></span><span class="ti">Marketing<span class="td"></span></span><span class="ti">Vendas<span class="td"></span></span><span class="ti">Independência Financeira<span class="td"></span></span><span class="ti">Temporada 2026<span class="td"></span></span><span class="ti">Profetas da Estética<span class="td"></span></span><span class="ti">Método de Negócio<span class="td"></span></span>
+  </div>
+</div>
+
+<!-- SEC 2 — DIAGNÓSTICO -->
+<section id="diag">
+  <div class="wrap">
+    <div class="diag-h rv">
+      <span class="ey ey-r">O Diagnóstico</span>
+      <h2><em>A faculdade te ensinou técnica.</em><br>A Academia te ensina o jogo do dinheiro.</h2>
+      <div class="div"></div>
+    </div>
+    <div class="diag-g">
+      <div class="rv">
+        <p>A maioria dos profissionais da estética <strong>estuda muito, trabalha muito, e ainda assim não consegue agenda previsível nem preço justo.</strong></p>
+        <p style="margin-top:12px">O problema não é técnica. É leitura de jogo.</p>
+      </div>
+      <div class="rv d1">
+        <p style="font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:20px">Sintomas comuns:</p>
+        <div class="sym-list">
+          <div class="sym"><div class="sym-dash"></div><p>Agenda instável, mesmo com boa técnica</p></div>
+          <div class="sym"><div class="sym-dash"></div><p>Clientes que somem quando recebem o preço</p></div>
+          <div class="sym"><div class="sym-dash"></div><p>Promoção constante para fechar o mês</p></div>
+          <div class="sym"><div class="sym-dash"></div><p>Sensação de que gente pior ganha mais</p></div>
+          <div class="sym"><div class="sym-dash"></div><p>Instagram que não converte em clientes</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 3 — MÉTODO -->
+<section id="method">
+  <div class="wrap">
+    <div class="method-h rv">
+      <span class="ey ey-o">O Método</span>
+      <h2>Três pilares. <span>Uma transformação.</span></h2>
+      <p class="sub">A temporada 2026 foi reestruturada em três trilhas independentes — mas que se completam. Cada aula resolve um problema real, com modelo pronto e ação para o mesmo dia.</p>
+    </div>
+    <div class="pillars">
+      <div class="pil rv"><div class="pil-num">01</div><div class="pil-tag">Trilha</div><h3>Posicionamento</h3><p>Pare de ser invisível. Construa uma marca que justifica o seu valor — antes de abrir a boca para vender.</p></div>
+      <div class="pil rv d1"><div class="pil-num">02</div><div class="pil-tag">Trilha</div><h3>Marketing</h3><p>Gere demanda de verdade. Sem depender de algoritmo, tendência ou sorte.</p></div>
+      <div class="pil rv d2"><div class="pil-num">03</div><div class="pil-tag">Trilha</div><h3>Vendas</h3><p>Transforme cada conversa em faturamento — sem pressão, sem script engessado.</p></div>
+    </div>
+    <div class="method-cta rv"><a href="#cta" class="btn btn-r btn-xl">Entrar para a Academia</a></div>
+  </div>
+</section>
+
+<!-- SEC 4 — NOVIDADE -->
+<section id="newt">
+  <div class="wrap">
+    <div class="newt-h rv">
+      <span class="ey ey-g">Nova Temporada</span>
+      <h2>Nova temporada. <span>Tudo foi repensado.</span></h2>
+      <p class="sub">Nova estrutura de aulas, novos professores, nova jornada. Cada detalhe foi reformulado para ser mais direto, mais prático e mais relevante para o mercado de hoje.</p>
+    </div>
+    <div class="new-g">
+      <div class="nc rv"><div class="nc-ico">▶</div><h3>Nova estrutura</h3><p>Trilhas sequenciadas com início, meio e resultado claro. Cada aula desbloqueia a próxima.</p></div>
+      <div class="nc rv d1"><div class="nc-ico">★</div><h3>Novos professores</h3><p>Profissionais que constroem marcas, vendem e vivem o mercado todos os dias — não só ensinam sobre ele.</p></div>
+      <div class="nc rv d2"><div class="bon">Bônus</div><h3>Wellness Economy</h3><p>Módulo sobre o futuro da beleza e do bem-estar. Quem antecipa tendências, domina.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 5 — FUNDADOR -->
+<section id="founder">
+  <div class="wrap">
+    <div class="founder-g">
+      <div class="rv">
+        <div class="founder-ph">
+          <div class="founder-sil"></div>
+          <div class="founder-note">📸 Foto do Guilherme — aguardando arquivo</div>
+          <div class="founder-cap">
+            <div class="fn">Guilherme Cattani</div>
+            <div class="fr">Fundador · Academia da Independência</div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-r rv d1">
+        <span class="ey ey-r">O Fundador</span>
+        <h2>Criado por quem vive o mercado da estética <span>todos os dias.</span></h2>
+        <div class="div"></div>
+        <p>Guilherme Cattani foi o <strong style="color:#fff">primeiro advogado do Brasil a se especializar em harmonização facial.</strong> Construiu o maior escritório jurídico do setor e, a partir daí, um ecossistema completo: escola de negócios, canal de mídia e uma visão única sobre como o mercado da estética realmente funciona.</p>
+        <p>Depois de anos assessorando profissionais e clínicas em todo o Brasil, identificou o padrão que se repete: <strong style="color:#fff">excelência técnica que não vira negócio.</strong> Profissionais extraordinários, invisíveis no mercado.</p>
+        <p>A Academia nasceu dessa observação — e de alguém que conhece esse mercado de dentro.</p>
+        <div class="founder-q"><p>"Quem ensina aqui não é teórico. É quem constrói, vende e acerta no mercado real."</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 6 — PROFESSORES -->
+<section id="inst">
+  <div class="wrap">
+    <div class="inst-h rv">
+      <span class="ey ey-g">Quem Ensina</span>
+      <h2>Não são só professores. <span>São profissionais do jogo.</span></h2>
+      <div class="div div-g"></div>
+      <p class="sub">Cada instrutor foi escolhido porque, além de ensinar, constrói marcas, gera demanda e vende no mercado real da estética.</p>
+    </div>
+    <div class="inst-g">
+      <div class="ic rv"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Casal Rocha</div><div class="ir">Professores</div></div></div></div>
+      <div class="ic rv d1"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Pietro Boscardin</div><div class="ir">Professor</div></div></div></div>
+      <div class="ic rv d2"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Bia Figueredo</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d3"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Yasmim Caciatori</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Sabrina Bender</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d1"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Yarlla Ravena</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d2"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Ingrid Louise</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d3"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Gaby Hakuna</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Nove.lab</div><div class="ir">Professor</div></div></div></div>
+      <div class="ic rv d1"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Patrícia Conde</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d2"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Bárbara Masiero</div><div class="ir">Professora</div></div></div></div>
+      <div class="ic rv d3"><div class="ic-img"><div class="ic-sil"></div><div class="ic-note">Foto em breve</div><div class="ic-ov"><div class="in">Mari De Grande</div><div class="ir">Professora</div></div></div></div>
+    </div>
+    <p class="inst-footer">📸 Fotos aguardando arquivos · Professores completos incluem também: Vini Tilmann · Gabrieli Borchard · Flavio Domingues</p>
+  </div>
+</section>
+
+<!-- SEC 7 — CONTEÚDO -->
+<section id="content">
+  <div class="wrap">
+    <div class="cnt-h rv">
+      <span class="ey ey-r">O Que Está Incluído</span>
+      <h2>Um ano de acesso. <span>Tudo incluído.</span></h2>
+      <div class="div"></div>
+      <p class="sub">Com a sua assinatura anual, você entra hoje e acessa tudo — sem espera, sem módulo travado.</p>
+    </div>
+    <div class="plan-hero rv">
+      <div class="ph-l">
+        <div class="plbl">Plano Anual</div>
+        <h3>Academia da Independência</h3>
+        <p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p>
+      </div>
+      <div class="ph-r">
+        <div class="from">12 parcelas de</div>
+        <div class="price"><span class="cur">R$</span><span class="val">97</span></div>
+        <div class="obs">ou à vista com desconto</div>
+        <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
+      </div>
+    </div>
+    <div class="mods-g">
+      <div class="mod rv">
+        <div class="mod-tag">◆ Construindo Marca</div>
+        <h4>O que faz um cliente te escolher</h4>
+        <ul>
+          <li>O que faz um cliente te escolher (e por que hoje ele não escolhe)</li>
+          <li>Como descobrir e construir seu posicionamento em 30 minutos</li>
+          <li>Diferenciação para quem está começando</li>
+          <li>A psicologia da primeira impressão</li>
+          <li>Como usar expressões de marca para cobrar mais</li>
+          <li>Como falar de estética sem parecer igual a todo mundo</li>
+          <li>O ritual da marca pessoal: o que você posta que te transforma em referência</li>
+          <li>O erro que destrói marcas: incoerência invisível</li>
+          <li>Como criar um storytelling simples que atrai clientes certos</li>
+          <li>Como se vestir de modo mais atrativo profissionalmente</li>
+        </ul>
+      </div>
+      <div class="mod rv d1">
+        <div class="mod-tag">◆ Marketing</div>
+        <h4>Posts que geram clientes</h4>
+        <ul>
+          <li>Por que seu Instagram não cresce — e como corrigir hoje</li>
+          <li>Como criar posts que dão agenda</li>
+          <li>Como encontrar temas que atraem seu cliente ideal</li>
+          <li>Os 7 tipos de posts que geram clientes na estética</li>
+          <li>Reels para tímidos: roteiro pronto de 30 segundos</li>
+          <li>Stories que vendem sem vender</li>
+          <li>Como usar prova social mesmo no início</li>
+          <li>Como transformar seu dia a dia em marketing</li>
+          <li>Como fazer marketing quando você não tem tempo</li>
+          <li>O calendário que dá resultado mesmo com pouca audiência</li>
+        </ul>
+      </div>
+      <div class="mod rv d2">
+        <div class="mod-tag">◆ Vendas</div>
+        <h4>Cada conversa em faturamento</h4>
+        <ul>
+          <li>Por que os clientes somem quando você manda o preço</li>
+          <li>A conversa que fecha: roteiro para WhatsApp e presencial</li>
+          <li>Como aumentar ticket médio na clínica</li>
+          <li>O segredo do paciente recorrente</li>
+          <li>Como responder objeções sem parecer vendedor</li>
+          <li>Estratégias de urgência e desejo para venda</li>
+          <li>Como montar um funil simples para ter procedimentos todo mês</li>
+          <li>Como montar pacotes e combos que vendem sozinhos</li>
+          <li>Como transformar cada atendimento em marketing gratuito</li>
+          <li>Como cobrar o preço certo e nunca mais pedir desculpa</li>
+        </ul>
+      </div>
+    </div>
+    <div class="acv rv">
+      <div class="acv-ico">+</div>
+      <div class="acv-t">
+        <h4>Acervo completo — Módulos anteriores da Academia</h4>
+        <p>Além da temporada 2026, você acessa todo o conteúdo já produzido pela Academia da Independência com alguns dos maiores nomes da HOF brasileira. Um acervo de aulas que continua disponível durante todo o período da sua assinatura.</p>
+      </div>
+    </div>
+    <div class="cnt-cta rv"><a href="#" class="btn btn-r btn-xl">Entrar para a Academia</a></div>
+  </div>
+</section>
+
+<!-- SEC 8 — RESULTADOS -->
+<section id="res">
+  <div class="wrap">
+    <div class="res-h rv">
+      <span class="ey ey-g">Resultados</span>
+      <h2>Quem já está <span>no jogo.</span></h2>
+      <div class="div div-g"></div>
+      <p class="sub">Profissionais reais, resultados reais.</p>
+    </div>
+    <div class="dep-g">
+      <div class="dep rv">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="dep-txt">"Em 3 meses, minha agenda lotou sem precisar fazer uma promoção sequer. Aprendi que o problema nunca foi a técnica — era o posicionamento."</p>
+        <div class="dep-au"><div class="ava">AG</div><div><div class="dn">Aluna da Academia</div><div class="dr">Harmonizadora Facial · SP</div></div></div>
+      </div>
+      <div class="dep rv d1">
+        <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="dep-txt">"Fui de R$4.000 para R$22.000 por mês em 6 meses. Não é motivação — é método."</p>
+        <div class="dep-au"><div class="ava">CM</div><div><div class="dn">Aluna da Academia</div><div class="dr">Esteticista · RS</div></div></div>
+      </div>
+      <div class="dep-ph rv d2"><p>📲 PRINTS E DEPOIMENTOS REAIS — Aguardando arquivos do cliente para substituir os exemplos acima</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 9 — PARA QUEM É -->
+<section id="fw">
+  <div class="fw-bg" aria-hidden="true">R$20K</div>
+  <div class="wrap">
+    <div class="fw-g">
+      <div class="fw-l rv">
+        <span class="ey ey-w">Para Quem É</span>
+        <h2>Para profissionais que decidem crescer.</h2>
+        <p class="sub">Faturar acima de R$ 20 mil por mês com método, posicionamento e sem virar refém do desconto.</p>
+        <ul class="fw-yes">
+          <li><span class="arr">→</span>Faturar acima de R$ 20 mil por mês</li>
+          <li><span class="arr">→</span>Ter agenda previsível sem viver de promoção</li>
+          <li><span class="arr">→</span>Construir marca e cobrar pelo valor real</li>
+          <li><span class="arr">→</span>Dominar posicionamento, marketing e vendas</li>
+          <li><span class="arr">→</span>Entender o mercado melhor do que a concorrência</li>
+        </ul>
+        <a href="#cta" class="btn btn-g btn-xl">Quero Entrar</a>
+        <div class="fw-no">
+          <div class="no-lbl">Não é para todo mundo</div>
+          <p>A Academia não funciona para quem acredita que mais certificações técnicas resolverão o problema de negócio. Ou para quem prefere culpar o mercado pelos próprios resultados.</p>
+          <p style="margin-top:12px;font-weight:700;color:rgba(255,255,255,.8)">Independência exige decisão.</p>
+        </div>
+      </div>
+      <div class="fw-r rv d1">
+        <div class="fwc"><h4>Aplicadoras e Harmonizadores</h4><p>Que dominam a técnica mas precisam dominar o negócio.</p></div>
+        <div class="fwc"><h4>Esteticistas e Terapeutas</h4><p>Que querem escalar além da maca e criar algo maior.</p></div>
+        <div class="fwc"><h4>Donos e Gestores de Clínica</h4><p>Que querem sair do operacional e construir uma marca sólida.</p></div>
+        <div class="fwc"><h4>Quem Quer Liderar a Beauty Economy</h4><p>Que entendem que a beleza virou economia — e querem pensar como dona.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 10 — CTA FINAL -->
+<section id="cta">
+  <div class="cta-wm" aria-hidden="true">AGORA</div>
+  <div class="wrap">
+    <div class="cta-in">
+      <span class="ey ey-r rv">Temporada 2026</span>
+      <h2 class="rv d1">A Beauty Economy está crescendo.<span>A questão é quem vai dominar.</span></h2>
+      <div class="div div-c rv d2"></div>
+      <p class="sub rv d2">Você pode continuar só com a técnica. Ou pode aprender como transformar técnica em posicionamento, demanda e dinheiro.</p>
+      <a href="#" class="btn btn-g btn-xl rv d3">Entrar para a Academia — Temporada 2026</a>
+      <div class="trust-r rv d4">
+        <div class="ti2"><div class="tck"></div>Acesso imediato após a compra</div>
+        <div class="ti2"><div class="tck"></div>Garantia de 15 dias</div>
+        <div class="ti2"><div class="tck"></div>12 meses de conteúdo completo</div>
+        <div class="ti2"><div class="tck"></div>Suporte real em português</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <div class="ftr-br">
+        <a href="#" class="logo">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#8B1A1A" stroke-width="2.5" fill="none"/><ellipse cx="24" cy="18" rx="8" ry="9" fill="#8B1A1A"/><rect x="17" y="26" width="14" height="10" rx="1" fill="#8B1A1A"/><path d="M21 13 L24 7.5 L27 13" stroke="#DAA66E" stroke-width="1.5" fill="none"/></svg>
+          <div><div class="logo-name">Academia</div><div class="logo-sub">da Independência</div></div>
+        </a>
+        <p>A escola de negócios da Beauty Economy. Posicionamento que sustenta, demanda que cresce, vendas que viram caixa.</p>
+      </div>
+      <div class="ftr-c"><h5>Navegação</h5><ul><li><a href="#diag">O Diagnóstico</a></li><li><a href="#method">O Método</a></li><li><a href="#inst">Professores</a></li><li><a href="#content">Conteúdo</a></li><li><a href="#fw">Para Quem</a></li></ul></div>
+      <div class="ftr-c"><h5>Acesso</h5><ul><li><a href="#">Área de Alunos</a></li><li><a href="#">Entrar para a Academia</a></li></ul></div>
+      <div class="ftr-c"><h5>Contato</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">YouTube</a></li><li><a href="#">Termos de Uso</a></li><li><a href="#">Política de Privacidade</a></li></ul></div>
+    </div>
+    <div class="ftr-bot">
+      <p>© 2026 Academia da Independência. Todos os direitos reservados.</p>
+      <p>A gente não vende hype. A gente ensina o jogo do dinheiro.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>hdr.classList.toggle('solid',window.scrollY>56));
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{ham.classList.toggle('x');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':''});
+function cm(){ham.classList.remove('x');mob.classList.remove('open');document.body.style.overflow=''}
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -32px 0px'});
+document.querySelectorAll('.rv').forEach(el=>{if(!el.closest('.ic-ov'))obs.observe(el)});
+document.querySelectorAll('.ic-ov .in,.ic-ov .ir').forEach(el=>{el.style.opacity=1;el.style.transform='none'});
+document.getElementById('p1').addEventListener('click',()=>alert('🎥 Vídeo será inserido aqui — aguardando arquivo do cliente.'));
+</script>
+</body>
+</html>
