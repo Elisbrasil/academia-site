@@ -37,8 +37,8 @@ p{line-height:1.78}
 #hdr.solid{background:rgba(12,12,12,.97);box-shadow:0 2px 24px rgba(0,0,0,.6)}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1160px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:11px;text-decoration:none}
-.logo-icon{height:46px;width:auto;flex-shrink:0;object-fit:contain}
-.logo-nav-text{height:32px;width:auto;object-fit:contain}
+.logo-icon{height:50px;width:auto;flex-shrink:0;object-fit:contain}
+.logo-nav-text{height:50px;width:auto;object-fit:contain}
 .nav-ul{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-ul a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
 .nav-ul a:hover{color:var(--gold)}
