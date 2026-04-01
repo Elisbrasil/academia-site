@@ -107,6 +107,13 @@ p{line-height:1.78}
 .pil-tag{display:inline-block;background:var(--red);color:rgba(255,255,255,.9);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:2px;margin-bottom:14px}
 .method-cta{text-align:center}
 
+.gold-divider {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border: none;
+    margin: 0;
+}
+
 /* NOVIDADE */
 #newt{background:var(--navy);padding:96px 0}
 .newt-h{text-align:center;margin-bottom:64px}
