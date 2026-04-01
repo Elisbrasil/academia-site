@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia da Independência — Temporada 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="hdr">
+    <div class="hdr-in">
+      <a href="#" class="logo">
+        <!-- Substitua logo.png pelo seu arquivo de logo -->
+        <img src="img/logo.png" alt="Academia da Independência" class="logo-icon">
+        <!-- Substitua logo-text.png pelo seu arquivo de texto da nav -->
+        <img src="img/logo-text.png" alt="Academia da Independência" class="logo-nav-text">
+      </a>
+      <nav>
+        <ul class="nav-ul">
+          <li><a href="#diag">O Problema</a></li>
+          <li><a href="#method">O Método</a></li>
+          <li><a href="#inst">Professores</a></li>
+          <li><a href="#content">Conteúdo</a></li>
+          <li><a href="#fw">Para Quem</a></li>
+          <li><a href="#cta" class="btn btn-r" style="padding:10px 20px;font-size:.76rem">Entrar para a Academia</a></li>
+        </ul>
+      </nav>
+      <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mob" id="mob">
+    <a href="#diag" onclick="cm()">O Problema</a>
+    <a href="#method" onclick="cm()">O Método</a>
+    <a href="#inst" onclick="cm()">Professores</a>
+    <a href="#content" onclick="cm()">Conteúdo</a>
+    <a href="#fw" onclick="cm()">Para Quem</a>
+    <a href="#cta" class="btn btn-g btn-xl" onclick="cm()">Entrar para a Academia</a>
+  </div>
+
+  <!-- SEC 1 — HERO -->
+  <section id="hero">
+    <div class="hero-wm" aria-hidden="true">INDEPENDÊNCIA</div>
+    <div class="hero-g">
+      <div>
+        <div class="hero-szn rv">
+          <div class="hero-szn-line"></div><span class="hero-szn-lbl">Temporada 2026</span>
+        </div>
+        <h1 class="hero-h1 rv d1">A escola de negócios<br><span class="red">da Beauty Economy.</span></h1>
+        <p class="hero-bold rv d2">Posicionamento. Marketing. Vendas.</p>
+        <p class="hero-sub rv d2">Tudo que a faculdade não ensinou — e o mercado cobra todo dia.</p>
+        <div class="hero-ctas rv d3">
+          <a href="#cta" class="btn btn-r btn-xl">Entrar para a Academia</a>
+          <a href="#diag" class="btn btn-ow">Ver o Diagnóstico</a>
+        </div>
+      </div>
+      <div class="hero-vid rv d2">
+        <div class="vid-box">
+          <div class="vid-in">
+            <div class="play" id="p1" role="button" aria-label="Play">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+            <span class="vid-note">Vídeo de apresentação</span>
+          </div>
+          <div class="vid-badge">Temporada 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-tr">
+      <span class="ti">Beauty Economy<span class="td"></span></span><span class="ti">Posicionamento<span class="td"></span></span><span class="ti">Marketing<span class="td"></span></span><span class="ti">Vendas<span class="td"></span></span><span class="ti">Independência Financeira<span class="td"></span></span><span class="ti">Temporada 2026<span class="td"></span></span><span class="ti">Profetas da Estética<span class="td"></span></span><span class="ti">Método de Negócio<span class="td"></span></span><span class="ti">Beauty Economy<span class="td"></span></span><span class="ti">Posicionamento<span class="td"></span></span><span class="ti">Marketing<span class="td"></span></span><span class="ti">Vendas<span class="td"></span></span><span class="ti">Independência Financeira<span class="td"></span></span><span class="ti">Temporada 2026<span class="td"></span></span><span class="ti">Profetas da Estética<span class="td"></span></span><span class="ti">Método de Negócio<span class="td"></span></span>
+    </div>
+  </div>
+
+  <!-- SEC 2 — DIAGNÓSTICO -->
+  <section id="diag">
+    <div class="wrap">
+      <div class="diag-h rv">
+        <span class="ey ey-r">O Diagnóstico</span>
+        <h2><em>A faculdade te ensinou técnica.</em><br>A Academia te ensina o jogo do dinheiro.</h2>
+        <div class="div"></div>
+      </div>
+      <div class="diag-g">
+        <div class="rv diag-l">
+          <p>A maioria dos profissionais da estética <strong>estuda muito, trabalha muito, e ainda assim não consegue agenda previsível nem preço justo.</strong></p>
+          <p style="margin-top:12px">O problema não é técnica. É leitura de jogo.</p>
+        </div>
+        <div class="rv d1">
+          <p style="font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:20px">Sintomas comuns:</p>
+          <div class="sym-list">
+            <div class="sym">
+              <div class="sym-dash"></div>
+              <p>Agenda instável, mesmo com boa técnica</p>
+            </div>
+            <div class="sym">
+              <div class="sym-dash"></div>
+              <p>Clientes que somem quando recebem o preço</p>
+            </div>
+            <div class="sym">
+              <div class="sym-dash"></div>
+              <p>Promoção constante para fechar o mês</p>
+            </div>
+            <div class="sym">
+              <div class="sym-dash"></div>
+              <p>Sensação de que gente pior ganha mais</p>
+            </div>
+            <div class="sym">
+              <div class="sym-dash"></div>
+              <p>Instagram que não converte em clientes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEC 3 — MÉTODO -->
+  <section id="method">
+    <div class="wrap">
+      <div class="method-h rv">
+        <span class="ey ey-o">O Método</span>
+        <h2>Três pilares. <span>Uma transformação.</span></h2>
+        <p class="sub">A temporada 2026 foi reestruturada em três trilhas independentes — mas que se completam. Cada aula resolve um problema real, com modelo pronto e ação para o mesmo dia.</p>
+      </div>
+      <div class="pillars">
+        <div class="pil rv">
+          <div class="pil-num">01</div>
+          <div class="pil-tag">Trilha</div>
+          <h3>Posicionamento</h3>
+          <p>Pare de ser invisível. Construa uma marca que justifica o seu valor — antes de abrir a boca para vender.</p>
+        </div>
+        <div class="pil rv d1">
+          <div class="pil-num">02</div>
+          <div class="pil-tag">Trilha</div>
+          <h3>Marketing</h3>
+          <p>Gere demanda de verdade. Sem depender de algoritmo, tendência ou sorte.</p>
+        </div>
+        <div class="pil rv d2">
+          <div class="pil-num">03</div>
+          <div class="pil-tag">Trilha</div>
+          <h3>Vendas</h3>
+          <p>Transforme cada conversa em faturamento — sem pressão, sem script engessado.</p>
+        </div>
+      </div>
+      <div class="method-cta rv"><a href="#cta" class="btn btn-r btn-xl">Entrar para a Academia</a></div>
+    </div>
+  </section>
+
+  <!-- SEC 4 — NOVIDADE -->
+  <section id="newt">
+    <div class="wrap">
+      <div class="newt-h rv">
+        <span class="ey ey-g">Nova Temporada</span>
+        <h2>Nova temporada. <span>Tudo foi repensado.</span></h2>
+        <p class="sub">Nova estrutura de aulas, novos professores, nova jornada. Cada detalhe foi reformulado para ser mais direto, mais prático e mais relevante para o mercado de hoje.</p>
+      </div>
+      <div class="new-g">
+        <div class="nc rv">
+          <div class="nc-ico">▶</div>
+          <h3>Nova estrutura</h3>
+          <p>Trilhas sequenciadas com início, meio e resultado claro. Cada aula desbloqueia a próxima.</p>
+        </div>
+        <div class="nc rv d1">
+          <div class="nc-ico">★</div>
+          <h3>Novos professores</h3>
+          <p>Profissionais que constroem marcas, vendem e vivem o mercado todos os dias — não só ensinam sobre ele.</p>
+        </div>
+        <div class="nc rv d2">
+          <div class="bon">Bônus</div>
+          <h3>Wellness Economy</h3>
+          <p>Módulo sobre o futuro da beleza e do bem-estar. Quem antecipa tendências, domina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEC 5 — FUNDADOR -->
+  <section id="founder">
+    <div class="wrap">
+      <div class="founder-g">
+        <div class="rv">
+          <div class="founder-ph">
+            <div class="founder-sil"></div>
+            <img src="img/guilherme.jpg" alt="Guilherme Cattani" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;">
+            <div class="founder-cap">
+              <div class="fn">Guilherme Cattani</div>
+              <div class="fr">Fundador · Academia da Independência</div>
+            </div>
+          </div>
+        </div>
+        <div class="founder-r rv d1">
+          <span class="ey ey-r">O Fundador</span>
+          <h2>Criado por quem vive o mercado da estética <span>todos os dias.</span></h2>
+          <div class="div"></div>
+          <p>Guilherme Cattani foi o <strong style="color:#fff">primeiro advogado do Brasil a se especializar em harmonização facial.</strong> Construiu o maior escritório jurídico do setor e, a partir daí, um ecossistema completo: escola de negócios, canal de mídia e uma visão única sobre como o mercado da estética realmente funciona.</p>
+          <p>Depois de anos assessorando profissionais e clínicas em todo o Brasil, identificou o padrão que se repete: <strong style="color:#fff">excelência técnica que não vira negócio.</strong> Profissionais extraordinários, invisíveis no mercado.</p>
+          <p>A Academia nasceu dessa observação — e de alguém que conhece esse mercado de dentro.</p>
+          <div class="founder-q">
+            <p>"Quem ensina aqui não é teórico. É quem constrói, vende e acerta no mercado real."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEC 6 — PROFESSORES -->
+  <section id="inst">
+    <div class="wrap">
+      <div class="inst-h rv">
+        <span class="ey ey-g">Quem Ensina</span>
+        <h2>Não são só professores. <span>São profissionais do jogo.</span></h2>
+        <div class="div div-g"></div>
+        <p class="sub">Cada instrutor foi escolhido porque, além de ensinar, constrói marcas, gera demanda e vende no mercado real da estética.</p>
+      </div>
+      <div class="inst-g">
+        <div class="ic rv">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Casal Rocha</div>
+              <div class="ir">Professores</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d1">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Pietro Boscardin</div>
+              <div class="ir">Professor</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d2">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Bia Figueredo</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d3">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Yasmim Caciatori</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Sabrina Bender</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d1">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Yarlla Ravena</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d2">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Ingrid Louise</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d3">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Gaby Hakuna</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Nove.lab</div>
+              <div class="ir">Professor</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d1">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Patrícia Conde</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d2">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Bárbara Masiero</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+        <div class="ic rv d3">
+          <div class="ic-img">
+            <div class="ic-sil"></div>
+            <div class="ic-note">Foto em breve</div>
+            <div class="ic-ov">
+              <div class="in">Mari De Grande</div>
+              <div class="ir">Professora</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="inst-footer">📸 Fotos aguardando arquivos · Professores completos incluem também: Vini Tilmann · Gabrieli Borchard · Flavio Domingues</p>
+    </div>
+  </section>
+
+  <!-- SEC 7 — CONTEÚDO -->
+  <section id="content">
+    <div class="wrap">
+      <div class="cnt-h rv">
+        <span class="ey ey-r">O Que Está Incluído</span>
+        <h2>Um ano de acesso. <span>Tudo incluído.</span></h2>
+        <div class="div"></div>
+        <p class="sub">Com a sua assinatura anual, você entra hoje e acessa tudo — sem espera, sem módulo travado.</p>
+      </div>
+      <div class="plan-hero rv">
+        <div class="ph-l">
+          <div class="plbl">Plano Anual</div>
+          <h3>Academia da Independência</h3>
+          <p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p>
+        </div>
+        <div class="ph-r">
+          <div class="from">12 parcelas de</div>
+          <div class="price"><span class="cur">R$</span><span class="val">97</span></div>
+          <div class="obs">ou à vista com desconto</div>
+          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
+        </div>
+      </div>
+      <div class="mods-g">
+        <div class="mod rv">
+          <div class="mod-tag">◆ Construindo Marca</div>
+          <h4>O que faz um cliente te escolher</h4>
+          <ul>
+            <li>O que faz um cliente te escolher (e por que hoje ele não escolhe)</li>
+            <li>Como descobrir e construir seu posicionamento em 30 minutos</li>
+            <li>Diferenciação para quem está começando</li>
+            <li>A psicologia da primeira impressão</li>
+            <li>Como usar expressões de marca para cobrar mais</li>
+            <li>Como falar de estética sem parecer igual a todo mundo</li>
+            <li>O ritual da marca pessoal: o que você posta que te transforma em referência</li>
+            <li>O erro que destrói marcas: incoerência invisível</li>
+            <li>Como criar um storytelling simples que atrai clientes certos</li>
+            <li>Como se vestir de modo mais atrativo profissionalmente</li>
+          </ul>
+        </div>
+        <div class="mod rv d1">
+          <div class="mod-tag">◆ Marketing</div>
+          <h4>Posts que geram clientes</h4>
+          <ul>
+            <li>Por que seu Instagram não cresce — e como corrigir hoje</li>
+            <li>Como criar posts que dão agenda</li>
+            <li>Como encontrar temas que atraem seu cliente ideal</li>
+            <li>Os 7 tipos de posts que geram clientes na estética</li>
+            <li>Reels para tímidos: roteiro pronto de 30 segundos</li>
+            <li>Stories que vendem sem vender</li>
+            <li>Como usar prova social mesmo no início</li>
+            <li>Como transformar seu dia a dia em marketing</li>
+            <li>Como fazer marketing quando você não tem tempo</li>
+            <li>O calendário que dá resultado mesmo com pouca audiência</li>
+          </ul>
+        </div>
+        <div class="mod rv d2">
+          <div class="mod-tag">◆ Vendas</div>
+          <h4>Cada conversa em faturamento</h4>
+          <ul>
+            <li>Por que os clientes somem quando você manda o preço</li>
+            <li>A conversa que fecha: roteiro para WhatsApp e presencial</li>
+            <li>Como aumentar ticket médio na clínica</li>
+            <li>O segredo do paciente recorrente</li>
+            <li>Como responder objeções sem parecer vendedor</li>
+            <li>Estratégias de urgência e desejo para venda</li>
+            <li>Como montar um funil simples para ter procedimentos todo mês</li>
+            <li>Como montar pacotes e combos que vendem sozinhos</li>
+            <li>Como transformar cada atendimento em marketing gratuito</li>
+            <li>Como cobrar o preço certo e nunca mais pedir desculpa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="acv rv">
+        <div class="acv-ico">+</div>
+        <div class="acv-t">
+          <h4>Acervo completo — Módulos anteriores da Academia</h4>
+          <p>Além da temporada 2026, você acessa todo o conteúdo já produzido pela Academia da Independência com alguns dos maiores nomes da HOF brasileira. Um acervo de aulas que continua disponível durante todo o período da sua assinatura.</p>
+        </div>
+      </div>
+      <div class="cnt-cta rv"><a href="#" class="btn btn-r btn-xl">Entrar para a Academia</a></div>
+    </div>
+  </section>
+
+  <!-- SEC 8 — RESULTADOS -->
+  <section id="res">
+    <div class="wrap">
+      <div class="res-h rv">
+        <span class="ey ey-g">Resultados</span>
+        <h2>Quem já está <span>no jogo.</span></h2>
+        <div class="div div-g"></div>
+        <p class="sub">Profissionais reais, resultados reais.</p>
+      </div>
+      <div class="dep-g">
+        <div class="dep rv">
+          <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+          <p class="dep-txt">"Em 3 meses, minha agenda lotou sem precisar fazer uma promoção sequer. Aprendi que o problema nunca foi a técnica — era o posicionamento."</p>
+          <div class="dep-au">
+            <div class="ava">AG</div>
+            <div>
+              <div class="dn">Aluna da Academia</div>
+              <div class="dr">Harmonizadora Facial · SP</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep rv d1">
+          <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+          </div>
+          <p class="dep-txt">"Fui de R$4.000 para R$22.000 por mês em 6 meses. Não é motivação — é método."</p>
+          <div class="dep-au">
+            <div class="ava">CM</div>
+            <div>
+              <div class="dn">Aluna da Academia</div>
+              <div class="dr">Esteticista · RS</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-ph rv d2">
+          <p>📲 PRINTS E DEPOIMENTOS REAIS — Aguardando arquivos do cliente para substituir os exemplos acima</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEC 9 — PARA QUEM É -->
+  <section id="fw">
+    <div class="fw-bg" aria-hidden="true">R$20K</div>
+    <div class="wrap">
+      <div class="fw-g">
+        <div class="fw-l rv">
+          <span class="ey ey-w">Para Quem É</span>
+          <h2>Para profissionais que decidem crescer.</h2>
+          <p class="sub">Faturar acima de R$ 20 mil por mês com método, posicionamento e sem virar refém do desconto.</p>
+          <ul class="fw-yes">
+            <li><span class="arr">→</span>Faturar acima de R$ 20 mil por mês</li>
+            <li><span class="arr">→</span>Ter agenda previsível sem viver de promoção</li>
+            <li><span class="arr">→</span>Construir marca e cobrar pelo valor real</li>
+            <li><span class="arr">→</span>Dominar posicionamento, marketing e vendas</li>
+            <li><span class="arr">→</span>Entender o mercado melhor do que a concorrência</li>
+          </ul>
+          <a href="#cta" class="btn btn-g btn-xl">Quero Entrar</a>
+          <div class="fw-no">
+            <div class="no-lbl">Não é para todo mundo</div>
+            <p>A Academia não funciona para quem acredita que mais certificações técnicas resolverão o problema de negócio. Ou para quem prefere culpar o mercado pelos próprios resultados.</p>
+            <p style="margin-top:12px;font-weight:700;color:rgba(255,255,255,.8)">Independência exige decisão.</p>
+          </div>
+        </div>
+        <div class="fw-r rv d1">
+          <div class="fwc">
+            <h4>Aplicadoras e Harmonizadores</h4>
+            <p>Que dominam a técnica mas precisam dominar o negócio.</p>
+          </div>
+          <div class="fwc">
+            <h4>Esteticistas e Terapeutas</h4>
+            <p>Que querem escalar além da maca e criar algo maior.</p>
+          </div>
+          <div class="fwc">
+            <h4>Donos e Gestores de Clínica</h4>
+            <p>Que querem sair do operacional e construir uma marca sólida.</p>
+          </div>
+          <div class="fwc">
+            <h4>Quem Quer Liderar a Beauty Economy</h4>
+            <p>Que entendem que a beleza virou economia — e querem pensar como dona.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEC 10 — CTA FINAL -->
+  <section id="cta">
+    <div class="cta-wm" aria-hidden="true">AGORA</div>
+    <div class="wrap">
+      <div class="cta-in">
+        <span class="ey ey-r rv">Temporada 2026</span>
+        <h2 class="rv d1">A Beauty Economy está crescendo.<span>A questão é quem vai dominar.</span></h2>
+        <div class="div div-c rv d2"></div>
+        <p class="sub rv d2">Você pode continuar só com a técnica. Ou pode aprender como transformar técnica em posicionamento, demanda e dinheiro.</p>
+        <a href="#" class="btn btn-g btn-xl rv d3">Entrar para a Academia — Temporada 2026</a>
+        <div class="trust-r rv d4">
+          <div class="ti2">
+            <div class="tck"></div>Acesso imediato após a compra
+          </div>
+          <div class="ti2">
+            <div class="tck"></div>Garantia de 15 dias
+          </div>
+          <div class="ti2">
+            <div class="tck"></div>12 meses de conteúdo completo
+          </div>
+          <div class="ti2">
+            <div class="tck"></div>Suporte real em português
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="ftr">
+    <div class="wrap">
+      <div class="ftr-top">
+        <div class="ftr-br">
+          <a href="#" class="logo">
+            <img src="img/logo.png" alt="Academia da Independência" class="logo-icon">
+            <img src="img/logo-text.png" alt="Academia da Independência" class="logo-nav-text">
+          </a>
+          <p>A escola de negócios da Beauty Economy. Posicionamento que sustenta, demanda que cresce, vendas que viram caixa.</p>
+        </div>
+        <div class="ftr-c">
+          <h5>Navegação</h5>
+          <ul>
+            <li><a href="#diag">O Diagnóstico</a></li>
+            <li><a href="#method">O Método</a></li>
+            <li><a href="#inst">Professores</a></li>
+            <li><a href="#content">Conteúdo</a></li>
+            <li><a href="#fw">Para Quem</a></li>
+          </ul>
+        </div>
+        <div class="ftr-c">
+          <h5>Acesso</h5>
+          <ul>
+            <li><a href="#">Área de Alunos</a></li>
+            <li><a href="#">Entrar para a Academia</a></li>
+          </ul>
+        </div>
+        <div class="ftr-c">
+          <h5>Contato</h5>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ftr-bot">
+        <p>© 2026 Academia da Independência. Todos os direitos reservados.</p>
+        <p>A gente não vende hype. A gente ensina o jogo do dinheiro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
