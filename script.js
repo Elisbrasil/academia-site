@@ -46,9 +46,12 @@ document.getElementById('p1').addEventListener('click', function () {
   vidIn.querySelector('.vid-note')?.remove();
 
   // Create and inject iframe
-  const iframe = document.createElement('iframe');
-  iframe.src = 'https://www.youtube.com/embed/iwxkzASnWcY?autoplay=1&rel=0';
-  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-  iframe.allowFullscreen = true;
-  vidIn.appendChild(iframe);
+  const video = document.createElement('video');
+  video.src = 'img/video.mp4';
+  video.controls = true;
+  video.autoplay = true;
+  video.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+  video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+  video.allowFullscreen = true;
+  vidIn.appendChild(video);
 });
