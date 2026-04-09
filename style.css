@@ -414,7 +414,15 @@ img.hero-wm {
   border-radius: 2px;
   z-index: 2;
 }
-
+.vid-caption {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.65;
+  font-style: italic;
+  border-left: 2px solid var(--red);
+  padding-left: 12px;
+}
 /* TICKER */
 .ticker {
   background: var(--red);
@@ -482,6 +490,13 @@ img.hero-wm {
 }
 .diag-l p strong {
   color: var(--black);
+}
+.diag-img {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 28px;
+  border-radius: 4px;
+  display: block;
 }
 .sym-list {
   display: flex;
@@ -594,8 +609,25 @@ img.hero-wm {
 
 /* NOVIDADE */
 #newt {
-  background: var(--navy);
-  padding: 96px 0;
+  background-image: url("img/Group\ 65.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 0;
+  position: relative;
+}
+
+#newt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.78);
+  z-index: 0;
+}
+
+#newt .wrap {
+  position: relative;
+  z-index: 1;
 }
 .newt-h {
   text-align: center;
@@ -606,6 +638,7 @@ img.hero-wm {
 }
 .newt-h .sub {
   color: rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.92);
   max-width: 540px;
   margin: 14px auto 0;
   font-size: 1rem;
@@ -620,6 +653,7 @@ img.hero-wm {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 4px;
   padding: 38px 28px;
+  backdrop-filter: blur(12px);
   transition:
     background 0.2s,
     border-color 0.2s;
