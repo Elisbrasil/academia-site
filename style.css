@@ -880,6 +880,95 @@ img.hero-wm {
   margin-top: 16px;
   letter-spacing: 0.06em;
 }
+/* CARROSSEL */
+.carousel-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.carousel-track-wrap {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-track .ic {
+  flex: 0 0 calc((100% - 48px) / 4);
+  min-width: 0;
+}
+
+.car-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.car-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+}
+
+.car-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 24px;
+}
+
+.car-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  border: none;
+}
+
+.car-dot.active {
+  background: var(--gold);
+  transform: scale(1.3);
+}
+
+@media (max-width: 1024px) {
+  .carousel-track .ic {
+    flex: 0 0 calc((100% - 32px) / 3);
+  }
+}
+
+@media (max-width: 680px) {
+  .carousel-track .ic {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
+}
 
 /* CONTEÚDO */
 #content {
