@@ -1282,22 +1282,78 @@ img.hero-wm {
   margin-top: 1px;
   font-size: 0.75rem;
 }
-.fw-no {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+.fw-no-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
 }
-.fw-no .no-lbl {
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.fw-no-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+}
+.fw-no-x {
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.5);
-  font-weight: 700;
-  margin-bottom: 14px;
+  flex-shrink: 0;
 }
-.fw-no p {
+.fw-no-header .no-lbl {
+  font-family: Impact, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+.fw-no-list {
+  list-style: none;
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.fw-no-list li {
+  font-size: 0.93rem;
   color: rgba(255, 255, 255, 0.65);
-  font-size: 0.9rem;
+  padding: 15px 0 15px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative;
+  line-height: 1.5;
+}
+.fw-no-list li:last-child {
+  border-bottom: none;
+}
+.fw-no-list li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.fw-no-footer {
+  padding: 18px 28px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+.fw-no-footer p {
+  font-family: Impact, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
 }
 .fw-r {
   display: flex;
