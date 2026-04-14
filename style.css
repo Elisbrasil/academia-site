@@ -1050,23 +1050,10 @@ img.hero-wm {
   font-size: 4rem;
   color: #fff;
 }
-.ph-r .per {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
-}
 .ph-r .obs {
   font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.3);
   margin-top: 4px;
-}
-.mods-g {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--cream-dark);
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 28px;
 }
 .mod {
   background: var(--cream);
@@ -1095,26 +1082,6 @@ img.hero-wm {
   color: var(--black);
   margin-bottom: 8px;
   line-height: 1.4;
-}
-.mod ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.mod ul li {
-  font-size: 0.76rem;
-  color: #555;
-  padding-left: 14px;
-  position: relative;
-  line-height: 1.5;
-}
-.mod ul li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--red);
-  font-size: 0.7rem;
 }
 .acv {
   background: var(--black);
