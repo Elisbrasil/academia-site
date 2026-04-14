@@ -365,11 +365,19 @@
         <div class="div"></div>
         <p class="sub">Com a sua assinatura anual, você entra hoje e acessa tudo — sem espera, sem módulo travado.</p>
       </div>
-      <div class="plan-hero rv">
+      <div class="plan-toggle-wrap rv">
+        <div class="plan-toggle">
+          <button class="ptb active" id="ptb-anual" onclick="switchPlan('anual')">Anual</button>
+          <button class="ptb" id="ptb-mensal" onclick="switchPlan('mensal')">Mensal</button>
+        </div>
+      </div>
+
+      <!-- PLANO ANUAL -->
+      <div class="plan-hero rv" id="plan-anual">
         <div class="ph-l">
           <div class="plbl">Plano Anual</div>
           <h3>Academia da Independência</h3>
-          <p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p>
+          <!--<p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p> -->
         </div>
         <div class="ph-r">
           <div class="from">12 parcelas de</div>
@@ -378,54 +386,85 @@
           <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
         </div>
       </div>
-      <div class="mods-g">
-        <div class="mod rv">
-          <div class="mod-tag">◆ Construindo Marca</div>
-          <h4>O que faz um cliente te escolher</h4>
-          <ul>
-            <li>O que faz um cliente te escolher (e por que hoje ele não escolhe)</li>
-            <li>Como descobrir e construir seu posicionamento em 30 minutos</li>
-            <li>Diferenciação para quem está começando</li>
-            <li>A psicologia da primeira impressão</li>
-            <li>Como usar expressões de marca para cobrar mais</li>
-            <li>Como falar de estética sem parecer igual a todo mundo</li>
-            <li>O ritual da marca pessoal: o que você posta que te transforma em referência</li>
-            <li>O erro que destrói marcas: incoerência invisível</li>
-            <li>Como criar um storytelling simples que atrai clientes certos</li>
-            <li>Como se vestir de modo mais atrativo profissionalmente</li>
-          </ul>
+
+      <!-- PLANO MENSAL -->
+      <div class="plan-hero rv plan-mensal-hero" id="plan-mensal" style="display:none">
+        <div class="ph-l">
+          <div class="plbl">Plano Mensal</div>
+          <h3>Academia da Independência</h3>
+          <!--<p>Acesso mensal renovável. Cancele quando quiser, sem burocracia.</p>-->
         </div>
-        <div class="mod rv d1">
-          <div class="mod-tag">◆ Marketing</div>
-          <h4>Posts que geram clientes</h4>
-          <ul>
-            <li>Por que seu Instagram não cresce — e como corrigir hoje</li>
-            <li>Como criar posts que dão agenda</li>
-            <li>Como encontrar temas que atraem seu cliente ideal</li>
-            <li>Os 7 tipos de posts que geram clientes na estética</li>
-            <li>Reels para tímidos: roteiro pronto de 30 segundos</li>
-            <li>Stories que vendem sem vender</li>
-            <li>Como usar prova social mesmo no início</li>
-            <li>Como transformar seu dia a dia em marketing</li>
-            <li>Como fazer marketing quando você não tem tempo</li>
-            <li>O calendário que dá resultado mesmo com pouca audiência</li>
-          </ul>
+        <div class="ph-r">
+          <div class="from">12 parcelas de</div>
+          <div class="price"><span class="cur">R$</span><span class="val">147</span></div>
+          <div class="obs">cobrança mensal recorrente</div>
+          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
         </div>
-        <div class="mod rv d2">
-          <div class="mod-tag">◆ Vendas</div>
-          <h4>Cada conversa em faturamento</h4>
-          <ul>
-            <li>Por que os clientes somem quando você manda o preço</li>
-            <li>A conversa que fecha: roteiro para WhatsApp e presencial</li>
-            <li>Como aumentar ticket médio na clínica</li>
-            <li>O segredo do paciente recorrente</li>
-            <li>Como responder objeções sem parecer vendedor</li>
-            <li>Estratégias de urgência e desejo para venda</li>
-            <li>Como montar um funil simples para ter procedimentos todo mês</li>
-            <li>Como montar pacotes e combos que vendem sozinhos</li>
-            <li>Como transformar cada atendimento em marketing gratuito</li>
-            <li>Como cobrar o preço certo e nunca mais pedir desculpa</li>
-          </ul>
+      </div>
+
+      <div class="mods-acc rv">
+        <div class="acc-item">
+          <button class="acc-hd" onclick="toggleAcc(this)">
+            <span class="acc-tag">◆ Construindo Marca</span>
+            <span class="acc-title"></span>
+            <span class="acc-arrow">＋</span>
+          </button>
+          <div class="acc-body">
+            <ul>
+              <li>O que faz um cliente te escolher (e por que hoje ele não escolhe)</li>
+              <li>Como descobrir e construir seu posicionamento em 30 minutos</li>
+              <li>Diferenciação para quem está começando</li>
+              <li>A psicologia da primeira impressão</li>
+              <li>Como usar expressões de marca para cobrar mais</li>
+              <li>Como falar de estética sem parecer igual a todo mundo</li>
+              <li>O ritual da marca pessoal: o que você posta que te transforma em referência</li>
+              <li>O erro que destrói marcas: incoerência invisível</li>
+              <li>Como criar um storytelling simples que atrai clientes certos</li>
+              <li>Como se vestir de modo mais atrativo profissionalmente</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-hd" onclick="toggleAcc(this)">
+            <span class="acc-tag">◆ Marketing</span>
+            <span class="acc-title"></span>
+            <span class="acc-arrow">＋</span>
+          </button>
+          <div class="acc-body">
+            <ul>
+              <li>Por que seu Instagram não cresce — e como corrigir hoje</li>
+              <li>Como criar posts que dão agenda</li>
+              <li>Como encontrar temas que atraem seu cliente ideal</li>
+              <li>Os 7 tipos de posts que geram clientes na estética</li>
+              <li>Reels para tímidos: roteiro pronto de 30 segundos</li>
+              <li>Stories que vendem sem vender</li>
+              <li>Como usar prova social mesmo no início</li>
+              <li>Como transformar seu dia a dia em marketing</li>
+              <li>Como fazer marketing quando você não tem tempo</li>
+              <li>O calendário que dá resultado mesmo com pouca audiência</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-hd" onclick="toggleAcc(this)">
+            <span class="acc-tag">◆ Vendas</span>
+            <span class="acc-title"></span>
+            <span class="acc-arrow">＋</span>
+          </button>
+          <div class="acc-body">
+            <ul>
+              <li>Por que os clientes somem quando você manda o preço</li>
+              <li>A conversa que fecha: roteiro para WhatsApp e presencial</li>
+              <li>Como aumentar ticket médio na clínica</li>
+              <li>O segredo do paciente recorrente</li>
+              <li>Como responder objeções sem parecer vendedor</li>
+              <li>Estratégias de urgência e desejo para venda</li>
+              <li>Como montar um funil simples para ter procedimentos todo mês</li>
+              <li>Como montar pacotes e combos que vendem sozinhos</li>
+              <li>Como transformar cada atendimento em marketing gratuito</li>
+              <li>Como cobrar o preço certo e nunca mais pedir desculpa</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="acv rv">
@@ -433,6 +472,7 @@
         <div class="acv-t">
           <h4>Acervo completo — Módulos anteriores da Academia</h4>
           <p>Além da temporada 2026, você acessa todo o conteúdo já produzido pela Academia da Independência com alguns dos maiores nomes da HOF brasileira. Um acervo de aulas que continua disponível durante todo o período da sua assinatura.</p>
+          <img src="img/moduloanterior.png" alt="" style="margin-top:16px;max-width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
         </div>
       </div>
       <div class="cnt-cta rv"><a href="#" class="btn btn-r btn-xl">Entrar para a Academia</a></div>
@@ -575,7 +615,7 @@
             <img src="img/logoteste.png" alt="Academia da Independência" class="logo-icon">
             <img src="img/logo-text.png" alt="Academia da Independência" class="logo-nav-text">
           </a>
-          <p>A escola de negócios da Beauty Economy. Posicionamento que sustenta, demanda que cresce, vendas que viram caixa.</p>
+          <!--<p>A escola de negócios da Beauty Economy. Posicionamento que sustenta, demanda que cresce, vendas que viram caixa.</p>-->
         </div>
         <div class="ftr-c">
           <h5>Navegação</h5>
@@ -607,7 +647,6 @@
       </div>
       <div class="ftr-bot">
         <p>© 2026 Academia da Independência. Todos os direitos reservados.</p> </br>
-        <p>A gente não vende hype. A gente ensina o jogo do dinheiro.</p>
       </div>
     </div>
   </footer>

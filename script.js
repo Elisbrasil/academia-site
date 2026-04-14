@@ -1,3 +1,27 @@
+// Plan toggle
+function switchPlan(plan) {
+  document.getElementById("plan-anual").style.display =
+    plan === "anual" ? "flex" : "none";
+  document.getElementById("plan-mensal").style.display =
+    plan === "mensal" ? "flex" : "none";
+  document
+    .getElementById("ptb-anual")
+    .classList.toggle("active", plan === "anual");
+  document
+    .getElementById("ptb-mensal")
+    .classList.toggle("active", plan === "mensal");
+}
+
+// Accordion
+function toggleAcc(btn) {
+  const item = btn.closest(".acc-item");
+  const isOpen = item.classList.contains("open");
+  document
+    .querySelectorAll(".acc-item.open")
+    .forEach((i) => i.classList.remove("open"));
+  if (!isOpen) item.classList.add("open");
+}
+
 // Header scroll effect
 const hdr = document.getElementById("hdr");
 window.addEventListener("scroll", () =>
