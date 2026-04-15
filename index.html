@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia da Independência — Temporada 2026</title>
+  <title>Academia da Independência</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
@@ -144,7 +146,7 @@
           <p>Profissionais que constroem marcas, vendem e vivem o mercado todos os dias — não só ensinam sobre ele.</p>
         </div>
         <div class="nc rv d2">
-          <div class="bon">Bônus</div>
+          <div class="nc-ico"><i class="fa-solid fa-bolt"></i></div>
           <h3>Conteúdo Aplicável</h3>
           <p>Nada de teoria solta. A nova temporada traz aulas práticas, diretas e feitas para você colocar em jogo no mesmo dia.</p>
         </div>
@@ -365,41 +367,46 @@
         <div class="div"></div>
         <p class="sub">Com a sua assinatura anual, você entra hoje e acessa tudo — sem espera, sem módulo travado.</p>
       </div>
-      <div class="plan-toggle-wrap rv">
-        <div class="plan-toggle">
-          <button class="ptb active" id="ptb-anual" onclick="switchPlan('anual')">Anual</button>
-          <button class="ptb" id="ptb-mensal" onclick="switchPlan('mensal')">Mensal</button>
-        </div>
-      </div>
+      <!-- PLANOS LADO A LADO -->
+      <div class="plans-row rv">
 
-      <!-- PLANO ANUAL -->
-      <div class="plan-hero rv" id="plan-anual">
-        <div class="ph-l">
-          <div class="plbl">Plano Anual</div>
-          <h3>Academia da Independência</h3>
-          <!--<p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p> -->
+        <!-- MENSAL -->
+        <div class="plan-card">
+          <div class="plan-card-title">Mensal</div>
+          <ul class="plan-feats">
+            <li>1 mês de acesso completo</li>
+            <li>Mais de 100 aulas</li>
+            <li>Acesso a todos os cursos</li>
+            <!--<li>Incididunt ut labore</li>-->
+          </ul>
+          <div class="plan-price-wrap">
+            <!--<div class="plan-from">12 parcelas de</div>-->
+            <div class="plan-price"><span class="plan-cur">R$</span><span class="plan-val">147</span></div>
+          </div>
+          <a href="#" class="btn btn-r" style="width:100%;text-align:center;margin-top:20px;display:block">Assinar Mensal</a>
         </div>
-        <div class="ph-r">
-          <div class="from">12 parcelas de</div>
-          <div class="price"><span class="cur">R$</span><span class="val">97</span></div>
-          <div class="obs">ou à vista com desconto</div>
-          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
-        </div>
-      </div>
 
-      <!-- PLANO MENSAL -->
-      <div class="plan-hero rv plan-mensal-hero" id="plan-mensal" style="display:none">
-        <div class="ph-l">
-          <div class="plbl">Plano Mensal</div>
-          <h3>Academia da Independência</h3>
-          <!--<p>Acesso mensal renovável. Cancele quando quiser, sem burocracia.</p>-->
+        <!-- ANUAL -->
+        <div class="plan-card plan-card-featured">
+          <div class="plan-badge">com desconto</div>
+          <div class="plan-card-title">Anual</div>
+          <ul class="plan-feats">
+            <li>12 meses de acesso completo</li>
+            <li>Mais de 100 aulas</li>
+            <li>Acesso a todos os cursos</li>
+            <li>Temporada 2026 completa - aulas novas e dinâmicas</li>
+            <li>Acesso a aulas exclusivas com experts</li>
+            <li>Acesso a comunidade para ampliar seu network</li>
+            <li>Certificado de conclusão</li>
+          </ul>
+          <div class="plan-price-wrap">
+            <div class="plan-from">12 parcelas de</div>
+            <div class="plan-price"><span class="plan-cur">R$</span><span class="plan-val">97</span></div>
+            <div class="plan-from">à vista R$ 997</div>
+          </div>
+          <a href="#" class="btn btn-g" style="width:100%;text-align:center;margin-top:20px;display:block">Assinar Anual</a>
         </div>
-        <div class="ph-r">
-          <div class="from">12 parcelas de</div>
-          <div class="price"><span class="cur">R$</span><span class="val">147</span></div>
-          <div class="obs">cobrança mensal recorrente</div>
-          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
-        </div>
+
       </div>
 
       <div class="mods-acc rv">
@@ -536,33 +543,33 @@
     <div class="wrap">
       <div class="fw-g">
         <div class="fw-l rv">
-          <span class="ey ey-w">Para Quem É</span>
-          <h2>Para profissionais que decidem crescer.</h2>
-          <p class="sub">Faturar acima de R$ 20 mil por mês com método, posicionamento e sem virar refém do desconto.</p>
-          <ul class="fw-yes">
-            <li><span class="arr">→</span>Faturar acima de R$ 20 mil por mês</li>
-            <li><span class="arr">→</span>Ter agenda previsível sem viver de promoção</li>
-            <li><span class="arr">→</span>Construir marca e cobrar pelo valor real</li>
-            <li><span class="arr">→</span>Dominar posicionamento, marketing e vendas</li>
-            <li><span class="arr">→</span>Entender o mercado melhor do que a concorrência</li>
+          <span class="ey ey-w">Pra Quem Não É</span>
+          <h2>A Academia não é para todo mundo.</h2>
+          <!--<p class="sub">Se você se identificar com qualquer item abaixo, este não é o seu lugar.</p>-->
+          <ul class="fw-no-list fw-no-list-big">
+            <li>A Academia não é para quem acredita em fórmulas prontas</li>
+            <li>A Academia não funciona para quem acredita que mais certificações técnicas resolverão o problema de negócio.</li>
+            <li>Ou para quem prefere culpar o mercado pelos próprios resultados.</li>
           </ul>
-          <a href="#cta" class="btn btn-g btn-xl">Quero Entrar</a>
+          <div class="fw-divider"></div>
+          <p class="fw-decision">Independência exige decisão.</p>
         </div>
+
         <div class="fw-r rv d1">
-          <div class="fw-no-card">
-            <div class="fw-no-header">
-              <span class="fw-no-x">✕</span>
-              <div class="no-lbl">Pra quem não é</div>
+          <div class="fw-yes-card">
+            <div class="fw-yes-header">
+              <span class="fw-yes-check">✓</span>
+              <div class="fw-yes-lbl">Para Quem É</div>
             </div>
-            <ul class="fw-no-list">
-              <li>Quem acredita em fórmulas prontas</li>
-              <li>Quem acha que mais certificações técnicas resolverão o problema de negócio</li>
-              <li>Quem prefere culpar o mercado pelos próprios resultados</li>
-              <li>Quem não está disposto a mudar a forma de pensar o negócio</li>
+            <p class="fw-yes-sub">Para profissionais que decidem crescer e faturar acima de R$ 20 mil por mês.</p>
+            <ul class="fw-yes">
+              <li><span class="arr">→</span>Faturar acima de R$ 20 mil por mês</li>
+              <li><span class="arr">→</span>Ter agenda previsível sem viver de promoção</li>
+              <li><span class="arr">→</span>Construir marca e cobrar pelo valor real</li>
+              <li><span class="arr">→</span>Dominar posicionamento, marketing e vendas</li>
+              <li><span class="arr">→</span>Entender o mercado melhor do que a concorrência</li>
             </ul>
-            <div class="fw-no-footer">
-              <p>Independência exige decisão.</p>
-            </div>
+            <a href="#cta" class="btn btn-g btn-xl" style="width:100%;text-align:center;margin-top:8px;">Quero Entrar</a>
           </div>
         </div>
       </div>
