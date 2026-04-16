@@ -593,7 +593,6 @@ img.hero-wm {
 .method-cta {
   text-align: center;
 }
-
 .gold-divider {
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
@@ -610,7 +609,6 @@ img.hero-wm {
   padding: 90px 0;
   position: relative;
 }
-
 #newt::before {
   content: "";
   position: absolute;
@@ -618,7 +616,6 @@ img.hero-wm {
   background: rgba(10, 10, 10, 0.78);
   z-index: 0;
 }
-
 #newt .wrap {
   position: relative;
   z-index: 1;
@@ -675,18 +672,6 @@ img.hero-wm {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.75;
-}
-.nc .bon {
-  display: inline-block;
-  background: rgba(218, 166, 110, 0.15);
-  color: var(--gold);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 2px;
-  margin-bottom: 14px;
 }
 
 /* FUNDADOR */
