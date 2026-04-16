@@ -365,44 +365,43 @@
         <div class="div"></div>
         <p class="sub">Com a sua assinatura anual, você entra hoje e acessa tudo — sem espera, sem módulo travado.</p>
       </div>
-      <!-- PLANOS LADO A LADO -->
-      <div class="plans-row rv">
 
-        <!-- MENSAL -->
-        <div class="plan-card">
-          <div class="plan-card-title">Mensal</div>
-          <ul class="plan-feats">
-            <li>1 mês de acesso completo</li>
-            <li>Mais de 100 aulas</li>
-            <li>Acesso a todos os cursos</li>
-          </ul>
-          <div class="plan-price-wrap">
-            <div class="plan-price"><span class="plan-cur">R$</span><span class="plan-val">147</span></div>
-          </div>
-          <a href="#" class="btn btn-r" style="width:100%;text-align:center;margin-top:20px;display:block">Assinar Mensal</a>
+      <!-- PLAN TOGGLE -->
+      <div class="plan-toggle-wrap rv">
+        <div class="plan-toggle">
+          <button class="ptb active" id="ptb-anual" onclick="switchPlan('anual')">Anual</button>
+          <button class="ptb" id="ptb-mensal" onclick="switchPlan('mensal')">Mensal</button>
         </div>
+      </div>
 
-        <!-- ANUAL -->
-        <div class="plan-card plan-card-featured">
-          <div class="plan-badge">com desconto</div>
-          <div class="plan-card-title">Anual</div>
-          <ul class="plan-feats">
-            <li>12 meses de acesso completo</li>
-            <li>Mais de 100 aulas</li>
-            <li>Acesso a todos os cursos</li>
-            <li>Temporada 2026 completa - aulas novas e dinâmicas</li>
-            <li>Acesso a aulas exclusivas com experts</li>
-            <li>Acesso a comunidade para ampliar seu network</li>
-            <li>Certificado de conclusão</li>
-          </ul>
-          <div class="plan-price-wrap">
-            <div class="plan-from">12 parcelas de</div>
-            <div class="plan-price"><span class="plan-cur">R$</span><span class="plan-val">97</span></div>
-            <div class="plan-from">à vista R$ 997</div>
-          </div>
-          <a href="#" class="btn btn-g" style="width:100%;text-align:center;margin-top:20px;display:block">Assinar Anual</a>
+      <!-- PLANO ANUAL -->
+      <div class="plan-hero rv" id="plan-anual">
+        <div class="ph-l">
+          <div class="plbl">Plano Anual</div>
+          <h3>Academia da Independência</h3>
+          <p>Acesso imediato a todos os módulos, professores e materiais — por 12 meses completos.</p>
         </div>
+        <div class="ph-r">
+          <div class="from">12 parcelas de</div>
+          <div class="price"><span class="cur">R$</span><span class="val">97</span></div>
+          <div class="obs">ou à vista com desconto</div>
+          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
+        </div>
+      </div>
 
+      <!-- PLANO MENSAL -->
+      <div class="plan-hero rv plan-mensal-hero" id="plan-mensal" style="display:none">
+        <div class="ph-l">
+          <div class="plbl">Plano Mensal</div>
+          <h3>Academia da Independência</h3>
+          <p>Acesso mensal renovável. Cancele quando quiser, sem burocracia.</p>
+        </div>
+        <div class="ph-r">
+          <div class="from">12 parcelas de</div>
+          <div class="price"><span class="cur">R$</span><span class="val">147</span></div>
+          <div class="obs">cobrança mensal recorrente</div>
+          <a href="#" class="btn btn-g" style="margin-top:16px;display:inline-block">Entrar Agora</a>
+        </div>
       </div>
 
       <div class="mods-acc rv">
