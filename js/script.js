@@ -95,7 +95,7 @@ if (playBtn) {
     vidIn.querySelector(".vid-note")?.remove();
 
     const video = document.createElement("video");
-    video.src = "img/video.mp4";
+    video.src = "assets/video.mp4";
     video.controls = true;
     video.autoplay = true;
     video.style.cssText =
