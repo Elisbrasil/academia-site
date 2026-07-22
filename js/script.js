@@ -121,6 +121,8 @@ if (playBtn) {
 
   const total = track.children.length;
   let cur = 0;
+  let autoplayTimer = null;
+  const AUTOPLAY_DELAY = 2500;
 
   function maxIndex() {
     return Math.max(0, total - getVisible());
@@ -133,7 +135,10 @@ if (playBtn) {
     for (let i = 0; i <= max; i++) {
       const d = document.createElement("button");
       d.className = "car-dot" + (i === cur ? " active" : "");
-      d.addEventListener("click", () => goTo(i));
+      d.addEventListener("click", () => {
+        goTo(i);
+        resetAutoplay();
+      });
       dotsEl.appendChild(d);
     }
   }
@@ -155,8 +160,47 @@ if (playBtn) {
     });
   }
 
-  prev.addEventListener("click", () => goTo(cur - 1));
-  next.addEventListener("click", () => goTo(cur + 1));
+  function goToNextLoop() {
+    if (cur >= maxIndex()) {
+      goTo(0);
+    } else {
+      goTo(cur + 1);
+    }
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(goToNextLoop, AUTOPLAY_DELAY);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function resetAutoplay() {
+    startAutoplay();
+  }
+
+  prev.addEventListener("click", () => {
+    goTo(cur - 1);
+    resetAutoplay();
+  });
+
+  next.addEventListener("click", () => {
+    goTo(cur + 1);
+    resetAutoplay();
+  });
+
+  track.addEventListener("mouseenter", stopAutoplay);
+  track.addEventListener("mouseleave", startAutoplay);
+
+  track.addEventListener("touchstart", stopAutoplay, { passive: true });
+  track.addEventListener("touchend", () => {
+    setTimeout(startAutoplay, 2000);
+  });
 
   window.addEventListener("resize", () => {
     buildDots();
@@ -165,4 +209,5 @@ if (playBtn) {
 
   buildDots();
   goTo(0);
+  startAutoplay();
 })();
